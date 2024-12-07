@@ -20,10 +20,7 @@ pipeline {
             steps {
                 // Execute the build with Jtest Maven plugin in docker
                 bat '''
-                    mvn -ntp compile \
-                    jtest:jtest \
-                    -Djtest.report=./target/jtest/sa \
-                    -Djtest.showSettings=true \
+                    mvn -ntp compile jtest:jtest
                     '''
             }
         }
