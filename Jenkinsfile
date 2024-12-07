@@ -8,7 +8,7 @@ pipeline {
                 // setup the workspace
                 // Clone this repository & Parabank repository into the workspace
                 bat  '''          
-                    git clone https://github.com/dparasoft/parabank.git && cd parabank
+                    git clone https://github.com/dparasoft/parabank.git && cd parabank && ls -ll
                     '''
                 // Prepare the jtestcli.properties file
 
