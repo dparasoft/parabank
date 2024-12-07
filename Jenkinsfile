@@ -1,16 +1,5 @@
 pipeline {
     agent any
-    tools {
-        maven 'maven'
-        jdk 'JDK 17'
-    }
-    environment {
-        // App Settings
-        // Parasoft Licenses  
-        // Parasoft Common Settings   
-        // Parasoft Jtest Settings
-        // Parasoft SOAtest Settings   
-    }
     stages {
         stage('Setup') {
             steps {
