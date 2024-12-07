@@ -20,7 +20,6 @@ pipeline {
             steps {
                 // Execute the build with Jtest Maven plugin in docker
                 bat '''
-                    # Compile the project and run Jtest Static Analysis
                     mvn -ntp compile \
                     jtest:jtest \
                     -Djtest.report=./target/jtest/sa \
