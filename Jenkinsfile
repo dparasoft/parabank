@@ -8,13 +8,8 @@ pipeline {
                 // setup the workspace
                 bat  '''          
                     # Clone this repository & Parabank repository into the workspace
-                    mkdir parabank
+                    cd parabank
                     git clone https://github.com/dparasoft/parabank.git parabank
-
-                    # Debugging
-                    #pwd
-                    #ls -ll
-                    '''
                 // Prepare the jtestcli.properties file
 
                 // Setup soatestcli.properties file
