@@ -10,6 +10,7 @@ pipeline {
                     # Clone this repository & Parabank repository into the workspace
                     cd parabank
                     git clone https://github.com/dparasoft/parabank.git parabank
+                    '''
                 // Prepare the jtestcli.properties file
 
                 // Setup soatestcli.properties file
@@ -27,4 +28,5 @@ pipeline {
                     '''
             }
         }
+    }
 }
