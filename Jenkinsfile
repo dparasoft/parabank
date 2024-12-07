@@ -20,8 +20,7 @@ pipeline {
             steps {
                 // Execute the build with Jtest Maven plugin in docker
                 bat '''
-                    cd parabank \
-                    mvn -ntp compile jtest:jtest \
+                    cd parabank && mvn -ntp compile jtest:jtest
                     '''
             }
         }
