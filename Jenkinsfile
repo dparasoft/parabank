@@ -7,7 +7,7 @@ pipeline {
                 // setup additional environment              
                 // setup the workspace
                 bat  '''          
-                    # Clone this repository & Parabank repository into the workspace
+                    // Clone this repository & Parabank repository into the workspace
                     cd parabank
                     git clone https://github.com/dparasoft/parabank.git parabank
                     '''
