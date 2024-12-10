@@ -29,7 +29,7 @@ pipeline {
             steps {
                 // Execute the scan with Jtest for Unit Test
                 bat '''
-                    cd parabank && mvn -ntp compile jtest:agent test jtest:jtest -Djtest.config='builtin://Unit Tests' -Dmaven.test.failure.ignore=true
+                    cd parabank && mvn -ntp compile jtest:agent test jtest:jtest -Djtest.config="builtin://Unit Tests" -Dmaven.test.failure.ignore=true
                     '''
             }
         }
