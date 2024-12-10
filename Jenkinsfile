@@ -18,9 +18,18 @@ pipeline {
         stage('Jtest: Quality Scan') {
             when { equals expected: true, actual: true }
             steps {
-                // Execute the build with Jtest Maven plugin in docker
+                // Execute the scan with Jtest for SA
                 bat '''
                     cd parabank && mvn -ntp compile jtest:jtest
+                    '''
+            }
+        }
+        stage('Jtest: Unit Test') {
+            when { equals expected: true, actual: true }
+            steps {
+                // Execute the scan with Jtest for Unit Test
+                bat '''
+                    cd parabank && mvn -ntp compile jtest:agent test jtest:jtest -Djtest.config='builtin://Unit Tests' -Dmaven.test.failure.ignore=true
                     '''
             }
         }
